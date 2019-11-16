@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ugbechike/mern-stack/issues"
   },
-  "homepage": "https://github.com/ugbechike/mern-stack#readme"
+  "homepage": "https://github.com/ugbechike/mern-stack#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0"
+  }
 }
