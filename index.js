@@ -1,7 +1,12 @@
 import express from 'express';
-import MockedUsers from './mocks/mockUsers'
+import logger from './middleware/logger';
+import withAuthentication from './middleware/withAuthentication'
+import MockedUsers from './mocks/mockUsers';
 
 const app = express();
+// middleware for logging the request methods
+app.use(withAuthentication)
+app.use(logger);
 const port = process.env.PORT;
 
 // todo abstract to a route folder
