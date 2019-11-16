@@ -4,6 +4,7 @@
   "description": "This is an e-commerce application built with ReactJS, NodeJs/Express, MongoDB.",
   "main": "index.js",
   "scripts": {
+    "start": "PORT=3300 nodemon ./index.js --exec babel-node --presets babel-preset-env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
