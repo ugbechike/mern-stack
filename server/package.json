@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "PORT=3300 nodemon ./index.js --exec babel-node --presets babel-preset-env",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:seed": "PORT=3300 nodemon ./script/seed.js --exec babel-node --presets babel-preset-env"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,12 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
+    "jest": "^24.9.0",
     "nodemon": "^1.19.4"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.7.11"
   }
 }
