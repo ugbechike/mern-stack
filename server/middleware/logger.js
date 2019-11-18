@@ -5,7 +5,7 @@ export default (req, res, next) => {
         req.originalUrl,
 
         'Auntication ===>',
-        req.admin,
+        req.isAdmin,
         req.authenticated
     );
 
