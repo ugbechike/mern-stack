@@ -37,8 +37,25 @@ export const users  = [
 
 ]
 
-const products = [
+export const products = [
     {
-
+        name: 'Apple',
+        price: 200,
+        image: ['image1', 'image2', 'image3']
+    },
+    {
+        name: 'Mango',
+        price: 200,
+        image: ['image1', 'image2', 'image3']
+    },
+    {
+        name: 'Pawpaw',
+        price: 200,
+        image: ['image1', 'image2', 'image3']
+    },
+    {
+        name: 'beans',
+        price: 200,
+        image: ['image1', 'image2', 'image3']
     }
 ]

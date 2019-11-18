@@ -1,6 +1,7 @@
 import { UserModel } from '../models/user';
-import {users} from './data';
+import {users, products} from './data';
 import {db} from '../db/db';
+import { ProductModel } from '../models/product';
 
 db.on('error', (error) => {console.log(error)});
 
@@ -17,6 +18,14 @@ db.once('open', () => {
             console.log(err)
         }else{
             console.log('data saved')
+        }
+    });
+
+    ProductModel.insertMany(products, (err) => {
+        if(err){
+            console.log(err)
+        }else{
+            console.log('product saved')
         }
     })
 
