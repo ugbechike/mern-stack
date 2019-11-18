@@ -1,18 +1,6 @@
-import mongoose, {Schema} from 'mongoose';
-
-mongoose.connect('mongodb://localhost:27017');
-
-const UserSchema = new Schema({
-    name: String,
-    email: String,
-    role: String
-});
-
-const UserModel = mongoose.model('User', UserSchema);
-
-
-const db = mongoose.connection;
-
+import { UserModel } from '../models/user';
+import {users} from './data';
+import {db} from '../db/db';
 
 db.on('error', (error) => {console.log(error)});
 
@@ -24,7 +12,7 @@ db.once('open', () => {
         role: "Admin"
     });
 
-    user.save((err) => {
+    UserModel.insertMany(users, (err) => {
         if (err){
             console.log(err)
         }else{
