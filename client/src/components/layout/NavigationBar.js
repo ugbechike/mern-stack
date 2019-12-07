@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 const NavBar = (props) => {
-const {isLoggedIn} = props
+const {isLoggedIn, itemsInCart} = props
 
     return (
         <div>
@@ -20,7 +20,9 @@ const {isLoggedIn} = props
                 <NavLink to='/orders'>Orders</NavLink>
                 </li>
                 <li>
-                <NavLink to='/cart'>My Cart</NavLink>
+                <NavLink to='/cart'>My Cart ({itemsInCart})</NavLink>
+                </li>
+                <li>
                 </li>
                 <li>
                 <NavLink to='/account'>Accounts</NavLink>

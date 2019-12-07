@@ -1,7 +1,16 @@
-export default (req, res, next)=> {
-    // todo update code for actual authentication
-    req.isAdmin = false,
-    req.authenticated = true
+import jwt from 'express-jwt';
 
-    next()
-};
+export default jwt ({
+    secret: process.env.JWT_SECRET,
+    credentialsRequired: false,
+    getToken: (req) => {
+        if(
+            req.headers &&
+            req.headers.authorization &&
+            req.headers.authorization.split(' ')[0] === 'Bearer'
+        ){
+            return req.headers.authorization.split(' ')[1];
+        }
+        return null;
+    },
+})

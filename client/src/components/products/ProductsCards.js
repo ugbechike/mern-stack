@@ -19,11 +19,6 @@ const ProductCard = (props) => {
     return (
         <div 
         className='productCard'
-        style={
-            props.pull ? {
-                alignSelf: 'flex-end'
-            } : null
-        }
         >
             <img 
             src={image} 

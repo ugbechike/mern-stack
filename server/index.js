@@ -5,6 +5,7 @@ import logger from './middleware/logger';
 import withAuthentication from './middleware/withAuthentication';
 import userRoute from './routes/users';
 import productRoute from './routes/products';
+import userAuth from './routes/auth';
 import proccess from 'process'
 import { db } from './db/db';
 
@@ -23,6 +24,7 @@ const port = process.env.PORT;
 
 userRoute(app)
 productRoute(app)
+userAuth(app)
 
 app.listen(port, () => {
     console.log(`app is running on PORT: ${port}`)

@@ -12,3 +12,18 @@ export const getProduct = async (categories) => {
         console.log(err)
     }
 }
+
+
+
+export const getProductById = async (id) => {
+    try {
+        const {data}  = await axios.get(
+            `/v1/products/${id}`
+        )
+
+    return new Product(data)
+    } catch(err) {
+        console.log(err)
+    }
+}
+
